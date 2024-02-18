@@ -20,10 +20,10 @@ else{
     factorial=1;
   }
   else{
-    for (let i=1; i<=n; i++ )
-    {
-      factorial*=i;
+    for (let i = num - 1; i >= 1; i--) {
+      num *= i;
     }
+    return num;
   }
 
 }
