@@ -15,7 +15,7 @@ function factorial(n) {
 }
 
 else{
-  if (n=0)
+  if (n==0)
   {
     factorial=1;
   }
