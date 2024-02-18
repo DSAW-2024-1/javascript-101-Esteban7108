@@ -1,26 +1,89 @@
 // Sum of Two Numbers
 function sum(a, b) {
-  // Add your code here
+// Add your code here
+if (typeof a !== 'number' || typeof b !== 'number') {
+  throw new Error('Los datos de entrada no son adecuados');
+}
+return a + b;
 }
 
 // Factorial of a Number
 function factorial(n) {
-  // Add your code here
+  if (typeof numero !== 'number' || isNaN(numero)) {
+    return 'Los datos de entrada no son adecuados';
 }
+
+let factorial = 1;
+for (let i = 2; i <= numero; i++) {
+    factorial *= i;
+}
+return factorial;
+
+}
+
 
 // Find the Largest Number
 function findLargest(arr) {
-  // Add your code here
+let largest = arr[0]; 
+if (arr.length === 0 || arr.some(isNaN)) {
+  return 'Los datos de entrada no son adecuados';
 }
+
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > largest) {
+        largest = arr[i];
+    }
+}
+
+return findLargest; // Devolver el número más grande
+}
+
 
 // Count Vowels in a String
 function countVowels(str) {
-  // Add your code here
+
+    if (!isNaN(palabra)) {
+        return 'Los datos de entrada no son adecuados';
+    }
+
+    palabra = palabra.toLowerCase();
+
+    const vocales = ['a', 'e', 'i', 'o', 'u'];
+
+    let contadorVocales = 0;
+
+    for (let letra of palabra) {
+
+        if (vocales.includes(letra)) {
+            contadorVocales++;
+        }
+    }
+
+    return countVowels;
 }
+
 
 // Check if a Number is Prime
 function isPrime(n) {
   // Add your code here
+
+  if (isNaN(numero) || typeof numero !== 'number') {
+    return 'Los datos de entrada no son adecuados';
+}
+
+
+if (numero <= 1) {
+    return false;
+}
+
+
+for (let i = 2; i <= Math.sqrt(numero); i++) {
+    if (numero % i === 0) {
+        return false;
+    }
+}
+
+return true;
 }
 
 module.exports = {
