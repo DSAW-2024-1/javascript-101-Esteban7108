@@ -9,7 +9,7 @@ return a + b;
 
 // Factorial of a Number
 function factorial(n) {
-  let factorial=0;
+  let factoriale=0;
   if (typeof n !== 'number' || isNaN(n)) {
     console.log( 'Los datos de entrada no son adecuados');
 }
@@ -17,18 +17,16 @@ function factorial(n) {
 else{
   if (n==0)
   {
-    factorial=1;
+    return factoriale=1;
   }
   else{
-    for (let i = n - 1; i >= 1; i--) {
-      num *= i;
-    }
-    return num;
+    return n * factorial(n-1)
+    
   }
 
 }
-return factorial;
 }
+
 // Find the Largest Number
 function findLargest(arr) {
 let largest = arr[0]; 
