@@ -2,7 +2,7 @@
 function sum(a, b) {
 // Add your code here
 if (typeof a !== 'number' || typeof b !== 'number') {
-  throw new Error('Los datos de entrada no son adecuados');
+  console.log('Los datos de entrada no son adecuados');
 }
 return a + b;
 }
@@ -10,13 +10,21 @@ return a + b;
 // Factorial of a Number
 function factorial(n) {
   if (typeof numero !== 'number' || isNaN(numero)) {
-    return 'Los datos de entrada no son adecuados';
+    console.log( 'Los datos de entrada no son adecuados');
 }
 
-let factorial = 1;
-for (let i = 2; i <= numero; i++) {
-    factorial *= i;
+let factorial=0;
+if (n=0)
+{
+  factorial=1;
 }
+else{
+  for (let i=1; i<=n; i++ )
+  {
+    factorial*=i;
+  }
+}
+
 return factorial;
 
 }
@@ -26,7 +34,7 @@ return factorial;
 function findLargest(arr) {
 let largest = arr[0]; 
 if (arr.length === 0 || arr.some(isNaN)) {
-  return 'Los datos de entrada no son adecuados';
+  console.log('Los datos de entrada no son adecuados');
 }
 
 for (let i = 1; i < arr.length; i++) {
@@ -35,7 +43,7 @@ for (let i = 1; i < arr.length; i++) {
     }
 }
 
-return findLargest; // Devolver el número más grande
+return findLargest;
 }
 
 
