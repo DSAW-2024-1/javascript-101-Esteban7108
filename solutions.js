@@ -13,20 +13,20 @@ function factorial(n) {
     console.log( 'Los datos de entrada no son adecuados');
 }
 
-let factorial=0;
-if (n=0)
-{
-  factorial=1;
-}
 else{
-  for (let i=1; i<=n; i++ )
+  if (n=0)
   {
-    factorial*=i;
+    factorial=1;
   }
+  else{
+    for (let i=1; i<=n; i++ )
+    {
+      factorial*=i;
+    }
+  }
+
 }
-
 return factorial;
-
 }
 
 
@@ -49,25 +49,22 @@ return findLargest;
 
 // Count Vowels in a String
 function countVowels(str) {
+  if (typeof str !== 'string') {
+      console.log('Los datos de entrada no son adecuados');
+      return;
+  }
 
-    if (!isNaN(palabra)) {
-        return 'Los datos de entrada no son adecuados';
-    }
+  str = str.toLowerCase();
+  const vocales = ['a', 'e', 'i', 'o', 'u'];
+  let contadorVocales = 0;
 
-    palabra = palabra.toLowerCase();
+  for (let letra of str) {
+      if (vocales.includes(letra)) {
+          contadorVocales++;
+      }
+  }
 
-    const vocales = ['a', 'e', 'i', 'o', 'u'];
-
-    let contadorVocales = 0;
-
-    for (let letra of palabra) {
-
-        if (vocales.includes(letra)) {
-            contadorVocales++;
-        }
-    }
-
-    return countVowels;
+  return contadorVocales;
 }
 
 
@@ -76,21 +73,14 @@ function isPrime(n) {
   // Add your code here
 
   if (isNaN(numero) || typeof numero !== 'number') {
-    return 'Los datos de entrada no son adecuados';
+    console.log ('Los datos de entrada no son adecuados');
 }
-
-
-if (numero <= 1) {
-    return false;
-}
-
 
 for (let i = 2; i <= Math.sqrt(numero); i++) {
     if (numero % i === 0) {
         return false;
     }
 }
-
 return true;
 }
 
