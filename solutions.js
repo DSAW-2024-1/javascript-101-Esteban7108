@@ -9,7 +9,7 @@ return a + b;
 
 // Factorial of a Number
 function factorial(n) {
-  let factoriale=0;
+  
   if (typeof n !== 'number' || isNaN(n)) {
     console.log( 'Los datos de entrada no son adecuados');
 }
@@ -17,10 +17,10 @@ function factorial(n) {
 else{
   if (n==0)
   {
-    return factoriale=1;
+    return 1;
   }
   else{
-    return n * factorial(n-1)
+    return n * factorial(n - 1);
     
   }
 
