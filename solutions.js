@@ -9,7 +9,8 @@ return a + b;
 
 // Factorial of a Number
 function factorial(n) {
-  if (typeof numero !== 'number' || isNaN(numero)) {
+  let factorial=0;
+  if (typeof n !== 'number' || isNaN(n)) {
     console.log( 'Los datos de entrada no son adecuados');
 }
 
@@ -28,8 +29,6 @@ else{
 }
 return factorial;
 }
-
-
 // Find the Largest Number
 function findLargest(arr) {
 let largest = arr[0]; 
@@ -43,10 +42,8 @@ for (let i = 1; i < arr.length; i++) {
     }
 }
 
-return findLargest;
+return largest;
 }
-
-
 // Count Vowels in a String
 function countVowels(str) {
   if (typeof str !== 'string') {
@@ -66,8 +63,6 @@ function countVowels(str) {
 
   return contadorVocales;
 }
-
-
 // Check if a Number is Prime
 function isPrime(n) {
   // Add your code here
