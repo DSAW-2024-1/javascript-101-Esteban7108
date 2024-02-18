@@ -72,12 +72,12 @@ function countVowels(str) {
 function isPrime(n) {
   // Add your code here
 
-  if (isNaN(numero) || typeof numero !== 'number') {
+  if (isNaN(n) || typeof n !== 'number') {
     console.log ('Los datos de entrada no son adecuados');
 }
 
-for (let i = 2; i <= Math.sqrt(numero); i++) {
-    if (numero % i === 0) {
+for (let i = 2; i <= Math.sqrt(n); i++) {
+    if (n % i === 0) {
         return false;
     }
 }
