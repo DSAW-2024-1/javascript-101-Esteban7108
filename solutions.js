@@ -20,7 +20,7 @@ else{
     factorial=1;
   }
   else{
-    for (let i = num - 1; i >= 1; i--) {
+    for (let i = n - 1; i >= 1; i--) {
       num *= i;
     }
     return num;
